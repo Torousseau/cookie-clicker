@@ -9,6 +9,6 @@ export default defineConfig({
     },
   },
   server: {
-    historyApiFallback: true, // option pour dev server (parfois)
+    historyApiFallback: true,
   },
 })
