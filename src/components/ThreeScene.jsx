@@ -31,13 +31,13 @@ export default function Pong3D() {
         scene.add(directionalLight);
 
         const paddleGeometry = new THREE.BoxGeometry(2, 0.5, 0.5);
-        const paddleMaterial = new THREE.MeshStandardMaterial({ color: 0x00ff00, metalness: 0.4, roughness: 0.3 });
+        const paddleMaterial = new THREE.MeshPhongMaterial({ color: 0x00ff00, roughness: 0.3 });
         const paddle = new THREE.Mesh(paddleGeometry, paddleMaterial);
         paddle.position.y = -4;
         scene.add(paddle);
 
         const ballGeometry = new THREE.SphereGeometry(0.3, 32, 32);
-        const ballMaterial = new THREE.MeshStandardMaterial({ color: 0xff3333, metalness: 0.6, roughness: 0.2 });
+        const ballMaterial = new THREE.MeshPhongMaterial({ color: 0xff3333, roughness: 0.2 });
         const ball = new THREE.Mesh(ballGeometry, ballMaterial);
         scene.add(ball);
 
