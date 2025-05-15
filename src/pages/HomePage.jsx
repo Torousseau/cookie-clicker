@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 import "../assets/styles/WiiHomePage.css";
-import { Tv2, Settings, Cookie, User } from "lucide-react";
+import {Settings, Cookie, User, TreeDeciduous} from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 const tiles = [
     { icon: <Cookie className="tile-icon" />, label: "Cookie Clicker", route: "/cookie-clicker" },
-    { icon: <Tv2 className="tile-icon" />, label: "Chaînes" },
+    { icon: <TreeDeciduous className="tile-icon" />, label: "Tree", route: "/tree" },
     { icon: <User className="tile-icon" />, label: "Profil" },
     { icon: <Settings className="tile-icon" />, label: "Paramètres" },
 ];
