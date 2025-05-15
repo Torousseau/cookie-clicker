@@ -10,7 +10,7 @@ import StatsPage from '../components/StatsPage.jsx';
 import AchievementPage from '../components/Achievements.jsx';
 import AchievementNotification from '../components/AchievementNotification.jsx';
 import achievementsData from '../data/achievements.json';
-import useSaveLoadCookies from '../hooks/useSaveLoadCookies';
+// import useSaveLoadCookies from '../hooks/useSaveLoadCookies';
 
 function CookieClicker() {
     const {
