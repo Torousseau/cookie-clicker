@@ -1,0 +1,118 @@
+{
+  "firstClick": {
+    "name": "Premier clic",
+    "description": "Clique sur le cookie une fois."
+  },
+  "tenCookies": {
+    "name": "10 cookies",
+    "description": "Atteins 10 cookies au total."
+  },
+  "hundredCookies": {
+    "name": "100 cookies",
+    "description": "Atteins 100 cookies."
+  },
+  "thousandCookies": {
+    "name": "1000 cookies",
+    "description": "Atteins 1000 cookies."
+  },
+  "tenThousandCookies": {
+    "name": "10 000 cookies",
+    "description": "Atteins 10 000 cookies."
+  },
+  "hundredThousandCookies": {
+    "name": "100 000 cookies",
+    "description": "Atteins 100 000 cookies."
+  },
+  "millionCookies": {
+    "name": "1 million de cookies",
+    "description": "Atteins 1 million de cookies."
+  },
+  "cookieMaster": {
+    "name": "Maître des cookies",
+    "description": "Atteins 10 millions de cookies."
+  },
+  "billionCookies": {
+    "name": "1 milliard de cookies",
+    "description": "Atteins 1 milliard de cookies."
+  },
+  "superClicker": {
+    "name": "Super cliqueur",
+    "description": "Clique 100 fois sur le cookie."
+  },
+  "grandClicker": {
+    "name": "Grand cliqueur",
+    "description": "Clique 1000 fois sur le cookie."
+  },
+  "millionaire": {
+    "name": "Millionnaire",
+    "description": "Atteins 1 million de cookies en une seule session."
+  },
+  "autoClicker": {
+    "name": "Cliqueur automatique",
+    "description": "Acheté un certain nombre de générateurs automatiques."
+  },
+  "idlePlayer": {
+    "name": "Joueur paresseux",
+    "description": "Laisse le jeu tourner pendant 24 heures."
+  },
+  "cookieGod": {
+    "name": "Dieu des cookies",
+    "description": "Atteins 1 trillion de cookies."
+  },
+  "speedRun": {
+    "name": "Speedrun",
+    "description": "Atteins 1000 cookies en moins de 5 minutes."
+  },
+  "unbreakable": {
+    "name": "Inébranlable",
+    "description": "Joue sans interruption pendant 72 heures."
+  },
+  "achievementHunter": {
+    "name": "Chasseur d'achievements",
+    "description": "Débloque tous les achievements du jeu."
+  },
+  "cookieClickingPro": {
+    "name": "Pro du clic",
+    "description": "Clique sur le cookie plus de 100 000 fois."
+  },
+  "cookieMastery": {
+    "name": "Maîtrise des cookies",
+    "description": "Atteins 100 trillions de cookies."
+  },
+  "godMode": {
+    "name": "Mode Dieu",
+    "description": "Débloque tous les pouvoirs spéciaux du jeu."
+  },
+  "legendaryClicker": {
+    "name": "Cliqueur légendaire",
+    "description": "Clique 1 million de fois sur le cookie."
+  },
+  "firstUpgrade": {
+    "name": "Premier upgrade",
+    "description": "Débloque ton premier upgrade."
+  },
+  "allUpgrades": {
+    "name": "Collectionneur d'upgrades",
+    "description": "Débloque tous les upgrades disponibles."
+  },
+  "upgradeExpert": {
+    "name": "Expert en upgrades",
+    "description": "Débloque 10 upgrades."
+  },
+  "autoUpgrade": {
+    "name": "Automatique",
+    "description": "Active un upgrade automatique."
+  },
+  "upgradeAddict": {
+    "name": "Addict des upgrades",
+    "description": "Débloque 50 upgrades."
+  },
+  "powerUpgrade": {
+    "name": "Amélioration puissante",
+    "description": "Débloque un upgrade qui augmente significativement ta production de cookies."
+  },
+  "maxedOutUpgrades": {
+    "name": "Maximisation",
+    "description": "Débloque tous les upgrades et atteins leur niveau maximal."
+  }
+}
