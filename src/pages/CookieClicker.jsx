@@ -34,20 +34,20 @@ function CookieClicker() {
     const [selectedTab, setSelectedTab] = useState(null);
 
     // Hook pour sauvegarde/restauration
-    useSaveLoadCookies({
-        cookies,
-        setCookies,
-        clickCount,
-        setClickCount,
-        timePlayed,
-        setTimePlayed,
-        unlockedAchievements,
-        setUnlockedAchievements,
-        latestAchievement,
-        setLatestAchievement,
-        upgrades,
-        setUpgrades,
-    });
+    // useSaveLoadCookies({
+    //     cookies,
+    //     setCookies,
+    //     clickCount,
+    //     setClickCount,
+    //     timePlayed,
+    //     setTimePlayed,
+    //     unlockedAchievements,
+    //     setUnlockedAchievements,
+    //     latestAchievement,
+    //     setLatestAchievement,
+    //     upgrades,
+    //     setUpgrades,
+    // });
 
     // Timer du temps de jeu
     useEffect(() => {
