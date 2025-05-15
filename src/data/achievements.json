@@ -61,7 +61,7 @@
   },
   "speedRun": {
     "name": "Speedrun",
-    "description": "Atteins 1000 cookies en moins de 5 minutes."
+    "description": "Atteins 1000 cookies dans la première minute."
   },
   "unbreakable": {
     "name": "Inébranlable",
@@ -78,10 +78,6 @@
   "cookieMastery": {
     "name": "Maîtrise des cookies",
     "description": "Atteins 100 trillions de cookies."
-  },
-  "godMode": {
-    "name": "Mode Dieu",
-    "description": "Débloque tous les pouvoirs spéciaux du jeu."
   },
   "legendaryClicker": {
     "name": "Cliqueur légendaire",
