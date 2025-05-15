@@ -20,24 +20,29 @@ export default function Pong3D() {
 
         const renderer = new THREE.WebGLRenderer({ antialias: true });
         renderer.setSize(width, height);
+        renderer.setClearColor(0x000000);
         mountRef.current.appendChild(renderer.domElement);
 
-        // Paddle
+        const ambientLight = new THREE.AmbientLight(0xffffff, 0.3);
+        scene.add(ambientLight);
+
+        const directionalLight = new THREE.DirectionalLight(0xffffff, 2);
+        directionalLight.position.set(5, 10, 7.5);
+        scene.add(directionalLight);
+
         const paddleGeometry = new THREE.BoxGeometry(2, 0.5, 0.5);
-        const paddleMaterial = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
+        const paddleMaterial = new THREE.MeshStandardMaterial({ color: 0x00ff00, metalness: 0.4, roughness: 0.3 });
         const paddle = new THREE.Mesh(paddleGeometry, paddleMaterial);
         paddle.position.y = -4;
         scene.add(paddle);
 
-        // Ball
-        const ballGeometry = new THREE.BoxGeometry(0.5, 0.5, 0.5);
-        const ballMaterial = new THREE.MeshBasicMaterial({ color: 0xff0000 });
+        const ballGeometry = new THREE.SphereGeometry(0.3, 32, 32);
+        const ballMaterial = new THREE.MeshStandardMaterial({ color: 0xff3333, metalness: 0.6, roughness: 0.2 });
         const ball = new THREE.Mesh(ballGeometry, ballMaterial);
         scene.add(ball);
 
         let ballVelocity = { x: 0.05, y: 0.07 };
 
-        // Keyboard controls
         const keys = {};
         const handleKeyDown = (e) => (keys[e.key] = true);
         const handleKeyUp = (e) => (keys[e.key] = false);
@@ -45,12 +50,9 @@ export default function Pong3D() {
         window.addEventListener('keyup', handleKeyUp);
 
         const checkCollisions = () => {
-            // Side walls
             if (ball.position.x >= 6 || ball.position.x <= -6) ballVelocity.x *= -1;
-            // Top wall
             if (ball.position.y >= 5) ballVelocity.y *= -1;
 
-            // Paddle collision
             const hitVertical = Math.abs(ball.position.y - paddle.position.y) < 0.4;
             const hitHorizontal = Math.abs(ball.position.x - paddle.position.x) < 1.25;
             if (hitVertical && hitHorizontal && ballVelocity.y < 0) {
@@ -58,7 +60,6 @@ export default function Pong3D() {
                 setScore((prev) => prev + 1);
             }
 
-            // Game Over
             if (ball.position.y < -5) {
                 setGameOver(true);
             }
@@ -67,16 +68,13 @@ export default function Pong3D() {
         const animate = () => {
             if (!mountRef.current || gameOver) return;
 
-            // Paddle movement
             if (keys['ArrowLeft'] && paddle.position.x > -5) paddle.position.x -= 0.2;
             if (keys['ArrowRight'] && paddle.position.x < 5) paddle.position.x += 0.2;
 
-            // Ball movement
             ball.position.x += ballVelocity.x;
             ball.position.y += ballVelocity.y;
 
             checkCollisions();
-
             renderer.render(scene, camera);
             frameId = requestAnimationFrame(animate);
         };
