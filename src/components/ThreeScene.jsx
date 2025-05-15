@@ -26,7 +26,7 @@ export default function Pong3D() {
         const ambientLight = new THREE.AmbientLight(0xffec75, 2);
         scene.add(ambientLight);
 
-        const directionalLight = new THREE.DirectionalLight(0xff0000, 0.1);
+        const directionalLight = new THREE.DirectionalLight(0xffec75, 2);
         directionalLight.position.set(5, 10, 7.5);
         scene.add(directionalLight);
 
