@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import "../assets/styles/WiiHomePage.css";
-import {Settings, Cookie, Github, TreeDeciduous} from "lucide-react";
+import {Settings, Cookie, Github, TreeDeciduous, Mail} from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import { Helmet } from 'react-helmet';
 
 const tiles = [
     { icon: <Cookie className="tile-icon" />, label: "Cookie Clicker", route: "/cookie-clicker" },
@@ -23,6 +24,10 @@ export default function WiiHomePage() {
         const timer = setInterval(() => setTime(new Date()), 1000);
         return () => clearInterval(timer);
     }, []);
+
+    const handleMailClick = () => {
+        window.open("mailto:theo.rousseau@supinfo.com");
+    }
 
     const handleTileClick = (tile, index) => {
         if (tile.route) {
@@ -68,6 +73,7 @@ export default function WiiHomePage() {
     ));
 
     return (
+
         <div className="wii-wrapper dark-mode">
             <div className="tile-grid-full">
                 {gridItems}
@@ -79,7 +85,7 @@ export default function WiiHomePage() {
                     <div className="footer-time">{formatTime(time)}</div>
                     <div className="footer-date">{formatDate(time)}</div>
                 </div>
-                <button className="footer-btn">✉️</button>
+                <button className="footer-btn" onClick={handleMailClick}><Mail /></button>
             </div>
         </div>
     );

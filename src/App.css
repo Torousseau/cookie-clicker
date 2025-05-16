@@ -3,11 +3,17 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 body{
   margin: 0;
   background-color: #242424;
+}
+
+body.dark .home-button{
+    background-color: #2f2f2f;
+    color: white;
 }
 
 .home-button {
@@ -16,15 +22,9 @@ body{
   top: 20px;
   transform: translateY(-50%);
   padding: 8px 14px;
-  background-color: var(--color-button, #444);
-  color: white;
-  border: none;
-  border-radius: 6px;
+  background-color: #f8f8f8;
+  color: var(--color-bg);
   cursor: pointer;
   font-size: 20px;
   transition: background-color 0.3s;
-}
-
-.home-button:hover {
-  background-color: var(--color-button-hover, #666);
 }

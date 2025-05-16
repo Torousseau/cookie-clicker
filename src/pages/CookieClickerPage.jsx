@@ -10,6 +10,7 @@ import Stats from '../components/Stats.jsx';
 import AchievementPage from '../components/Achievements.jsx';
 import AchievementNotification from '../components/AchievementNotification.jsx';
 import achievementsData from '../data/achievements.json';
+import {Helmet} from "react-helmet";
 
 function CookieClickerPage() {
     const {
@@ -23,6 +24,8 @@ function CookieClickerPage() {
         unlockedUpgrades,
         reset,
     } = useCookieGame();
+
+    // const [theme] = useState(() => localStorage.getItem('theme'));
 
     const [clickCount, setClickCount] = useState(0);
     const [timePlayed, setTimePlayed] = useState(0);
