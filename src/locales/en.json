@@ -1,12 +1,157 @@
 {
-  "title": "Settings",
-  "username": "Username",
+  "settings": "Settings",
   "theme": "Theme",
   "language": "Language",
-  "notifications": "Notifications",
-  "save": "Save",
   "light": "Light",
   "dark": "Dark",
   "system": "System",
-  "saved": "Settings saved!"
+  "reset": "Reset Game",
+  "click-me": "Click me!",
+  "upgrades": "Upgrades",
+  "cost": "Cost",
+  "no-upgrades": "No upgrades available",
+  "loading-achievements": "Loading achievements...",
+  "achievements": "Achievements",
+  "unlocked-achievement": "Unlocked achievement(s)",
+  "stats": "Statistics",
+  "total-cookies": "Total cookies",
+  "cps": "Cookies per second (CPS)",
+  "unlocked-upgrades": "Unlocked upgrades",
+  "time-played": "Time played",
+  "upgrades-name": {
+    "cursor": "Cursor",
+    "grandma": "Grandma",
+    "farm": "Farm",
+    "mine": "Mine",
+    "factory": "Factory",
+    "bank": "Bank",
+    "temple": "Temple",
+    "wizardTower": "Wizard Tower",
+    "shipment": "Shipment",
+    "alchemyLab": "Alchemy Lab",
+    "portal": "Portal",
+    "timeMachine": "Time Machine",
+    "antimatterCondenser": "Antimatter Condenser",
+    "fractalEngine": "Fractal Engine",
+    "computationalMatrix": "Computational Matrix",
+    "void": "Void",
+    "galaxy": "Galaxy",
+    "cosmic": "Cosmic",
+    "darkMatter": "Dark Matter",
+    "supernova": "Supernova"
+  },
+  "achievements-name": {
+    "firstClick": {
+      "name": "First Click",
+      "description": "Click the cookie once."
+    },
+    "tenCookies": {
+      "name": "10 Cookies",
+      "description": "Reach 10 total cookies."
+    },
+    "hundredCookies": {
+      "name": "100 Cookies",
+      "description": "Reach 100 cookies."
+    },
+    "thousandCookies": {
+      "name": "1,000 Cookies",
+      "description": "Reach 1,000 cookies."
+    },
+    "tenThousandCookies": {
+      "name": "10,000 Cookies",
+      "description": "Reach 10,000 cookies."
+    },
+    "hundredThousandCookies": {
+      "name": "100,000 Cookies",
+      "description": "Reach 100,000 cookies."
+    },
+    "millionCookies": {
+      "name": "1 Million Cookies",
+      "description": "Reach 1 million cookies."
+    },
+    "cookieMaster": {
+      "name": "Cookie Master",
+      "description": "Reach 10 million cookies."
+    },
+    "billionCookies": {
+      "name": "1 Billion Cookies",
+      "description": "Reach 1 billion cookies."
+    },
+    "superClicker": {
+      "name": "Super Clicker",
+      "description": "Click the cookie 100 times."
+    },
+    "grandClicker": {
+      "name": "Grand Clicker",
+      "description": "Click the cookie 1,000 times."
+    },
+    "millionaire": {
+      "name": "Millionaire",
+      "description": "Reach 1 million cookies in one session."
+    },
+    "autoClicker": {
+      "name": "Auto Clicker",
+      "description": "Purchase a certain number of auto generators."
+    },
+    "idlePlayer": {
+      "name": "Lazy Player",
+      "description": "Let the game run for 24 hours."
+    },
+    "cookieGod": {
+      "name": "Cookie God",
+      "description": "Reach 1 trillion cookies."
+    },
+    "speedRun": {
+      "name": "Speedrun",
+      "description": "Reach 1,000 cookies in the first minute."
+    },
+    "unbreakable": {
+      "name": "Unbreakable",
+      "description": "Play non-stop for 72 hours."
+    },
+    "achievementHunter": {
+      "name": "Achievement Hunter",
+      "description": "Unlock all achievements in the game."
+    },
+    "cookieClickingPro": {
+      "name": "Clicking Pro",
+      "description": "Click the cookie more than 100,000 times."
+    },
+    "cookieMastery": {
+      "name": "Cookie Mastery",
+      "description": "Reach 100 trillion cookies."
+    },
+    "legendaryClicker": {
+      "name": "Legendary Clicker",
+      "description": "Click the cookie 1 million times."
+    },
+    "firstUpgrade": {
+      "name": "First Upgrade",
+      "description": "Unlock your first upgrade."
+    },
+    "allUpgrades": {
+      "name": "Upgrade Collector",
+      "description": "Unlock all available upgrades."
+    },
+    "upgradeExpert": {
+      "name": "Upgrade Expert",
+      "description": "Unlock 10 upgrades."
+    },
+    "autoUpgrade": {
+      "name": "Automatic",
+      "description": "Activate an automatic upgrade."
+    },
+    "upgradeAddict": {
+      "name": "Upgrade Addict",
+      "description": "Unlock 50 upgrades."
+    },
+    "powerUpgrade": {
+      "name": "Powerful Upgrade",
+      "description": "Unlock an upgrade that greatly boosts your cookie production."
+    },
+    "maxedOutUpgrades": {
+      "name": "Maximization",
+      "description": "Unlock all upgrades and reach their maximum level."
+    }
+  }
 }

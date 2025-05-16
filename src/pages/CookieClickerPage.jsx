@@ -10,9 +10,10 @@ import Stats from '../components/Stats.jsx';
 import AchievementPage from '../components/Achievements.jsx';
 import AchievementNotification from '../components/AchievementNotification.jsx';
 import achievementsData from '../data/achievements.json';
-import {Helmet} from "react-helmet";
+import {useTranslation} from "react-i18next";
 
 function CookieClickerPage() {
+    const { t } = useTranslation();
     const {
         cookies,
         cookiesPerSecond,
@@ -147,7 +148,7 @@ function CookieClickerPage() {
         <div className="cookie-clicker">
             <Header/>
             <button onClick={resetGame} className="reset-button">
-                Réinitialiser le jeu
+                {t('reset')}
             </button>
 
             <h1 className="header-title">Cookie Clicker</h1>

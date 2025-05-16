@@ -2,8 +2,10 @@ import React, { useEffect } from 'react';
 import '../App.css'; // Assurez-vous que ce fichier CSS est bien importé
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrophy } from '@fortawesome/free-solid-svg-icons';
+import {useTranslation} from "react-i18next";
 
 function AchievementNotification({ achievement, onClose }) {
+    const { t } = useTranslation();
     useEffect(() => {
         const timer = setTimeout(() => {
             onClose();
@@ -18,12 +20,12 @@ function AchievementNotification({ achievement, onClose }) {
                     <FontAwesomeIcon icon={faTrophy} />
                 </div>
                 <div className="steam-text-section">
-                    <div className="steam-title">Succès débloqué</div>
+                    <div className="steam-title">{t('unlocked-achievement')} !</div>
                     <div className="steam-name">{achievement.name}</div>
                     <div className="steam-description">{achievement.description}</div>
                 </div>
             </div>
-            <div className="steam-glow"></div> {/* Ajout du fond lumineux */}
+            <div className="steam-glow"></div> {}
         </div>
     );
 }

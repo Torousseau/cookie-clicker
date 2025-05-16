@@ -35,7 +35,7 @@ const SettingsPage = () => {
     return (
         <div className="settings-container">
             <Header />
-            <h1>{t('title')}</h1>
+            <h1>{t('settings')}</h1>
 
             <div className="form-group">
                 <label htmlFor="theme">{t('theme')} :</label>

@@ -3,16 +3,18 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes, faCheckCircle, faLock } from '@fortawesome/free-solid-svg-icons';
 import achievementsData from '../data/achievements.json';
 import '../App.css';
+import { useTranslation } from 'react-i18next';
 
 function AchievementPage({ onClose, unlockedAchievements = {} }) {
-    if (!achievementsData) return <p>Loading achievements...</p>;
+    const { t } = useTranslation();
+    if (!achievementsData) return <p>{t('loading-achievements')}</p>;
 
     return (
         <div className="achievement-page">
             <div className="popup-header">
-                <h2>Achievements</h2>
+                <h2>{t('achievements')}</h2>
                 <button className="close-button" onClick={onClose}>
-                    <FontAwesomeIcon icon={faTimes} size="lg"/>
+                    <FontAwesomeIcon icon={faTimes} size="lg" />
                 </button>
             </div>
             <ul>
@@ -28,7 +30,7 @@ function AchievementPage({ onClose, unlockedAchievements = {} }) {
                                 <FontAwesomeIcon icon={unlocked ? faCheckCircle : faLock} size="lg" />
                             </span>
                             <div className="achievement-title">
-                                <strong>{achievement.name}</strong>: {achievement.description}
+                                <strong>{t(`achievements-name.${key}.name`)}</strong>: {t(`achievements-name.${key}.description`)}
                             </div>
                         </li>
                     );

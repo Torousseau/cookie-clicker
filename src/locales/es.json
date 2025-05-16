@@ -1,12 +1,157 @@
 {
-  "title": "Configuración",
-  "username": "Nombre de usuario",
+  "settings": "Ajustes",
   "theme": "Tema",
   "language": "Idioma",
-  "notifications": "Notificaciones",
-  "save": "Guardar",
   "light": "Claro",
   "dark": "Oscuro",
   "system": "Sistema",
-  "saved": "¡Configuración guardada!"
+  "reset": "Reiniciar juego",
+  "click-me": "¡Haz clic en mí!",
+  "upgrades": "Mejoras",
+  "cost": "Costo",
+  "no-upgrades": "No hay mejoras disponibles",
+  "loading-achievements": "Cargando logros...",
+  "achievements": "Logros",
+  "unlocked-achievement": "Logro(s) desbloqueado(s)",
+  "stats": "Estadísticas",
+  "total-cookies": "Total de cookies",
+  "cps": "Cookies por segundo (CPS)",
+  "unlocked-upgrades": "Mejoras desbloqueadas",
+  "time-played": "Tiempo jugado",
+  "upgrades-name": {
+    "cursor": "Cursor",
+    "grandma": "Abuela",
+    "farm": "Granja",
+    "mine": "Mina",
+    "factory": "Fábrica",
+    "bank": "Banco",
+    "temple": "Templo",
+    "wizardTower": "Torre de mago",
+    "shipment": "Envío",
+    "alchemyLab": "Laboratorio de alquimia",
+    "portal": "Portal",
+    "timeMachine": "Máquina del tiempo",
+    "antimatterCondenser": "Condensador de antimateria",
+    "fractalEngine": "Motor fractal",
+    "computationalMatrix": "Matriz computacional",
+    "void": "Vacío",
+    "galaxy": "Galaxia",
+    "cosmic": "Cósmico",
+    "darkMatter": "Materia oscura",
+    "supernova": "Supernova"
+  },
+  "achievements-name": {
+    "firstClick": {
+      "name": "Primer clic",
+      "description": "Haz clic en la galleta una vez."
+    },
+    "tenCookies": {
+      "name": "10 galletas",
+      "description": "Alcanza 10 galletas en total."
+    },
+    "hundredCookies": {
+      "name": "100 galletas",
+      "description": "Alcanza 100 galletas."
+    },
+    "thousandCookies": {
+      "name": "1.000 galletas",
+      "description": "Alcanza 1.000 galletas."
+    },
+    "tenThousandCookies": {
+      "name": "10.000 galletas",
+      "description": "Alcanza 10.000 galletas."
+    },
+    "hundredThousandCookies": {
+      "name": "100.000 galletas",
+      "description": "Alcanza 100.000 galletas."
+    },
+    "millionCookies": {
+      "name": "1 millón de galletas",
+      "description": "Alcanza 1 millón de galletas."
+    },
+    "cookieMaster": {
+      "name": "Maestro de las galletas",
+      "description": "Alcanza 10 millones de galletas."
+    },
+    "billionCookies": {
+      "name": "1 billón de galletas",
+      "description": "Alcanza 1 billón de galletas."
+    },
+    "superClicker": {
+      "name": "Súper clicador",
+      "description": "Haz clic en la galleta 100 veces."
+    },
+    "grandClicker": {
+      "name": "Gran clicador",
+      "description": "Haz clic en la galleta 1.000 veces."
+    },
+    "millionaire": {
+      "name": "Millonario",
+      "description": "Alcanza 1 millón de galletas en una sola sesión."
+    },
+    "autoClicker": {
+      "name": "Clicador automático",
+      "description": "Compra una cierta cantidad de generadores automáticos."
+    },
+    "idlePlayer": {
+      "name": "Jugador inactivo",
+      "description": "Deja el juego funcionando durante 24 horas."
+    },
+    "cookieGod": {
+      "name": "Dios de las galletas",
+      "description": "Alcanza 1 trillón de galletas."
+    },
+    "speedRun": {
+      "name": "Speedrun",
+      "description": "Alcanza 1.000 galletas en el primer minuto."
+    },
+    "unbreakable": {
+      "name": "Inquebrantable",
+      "description": "Juega sin parar durante 72 horas."
+    },
+    "achievementHunter": {
+      "name": "Cazador de logros",
+      "description": "Desbloquea todos los logros del juego."
+    },
+    "cookieClickingPro": {
+      "name": "Pro del clic",
+      "description": "Haz clic en la galleta más de 100.000 veces."
+    },
+    "cookieMastery": {
+      "name": "Maestría de galletas",
+      "description": "Alcanza 100 trillones de galletas."
+    },
+    "legendaryClicker": {
+      "name": "Clicador legendario",
+      "description": "Haz clic en la galleta 1 millón de veces."
+    },
+    "firstUpgrade": {
+      "name": "Primera mejora",
+      "description": "Desbloquea tu primera mejora."
+    },
+    "allUpgrades": {
+      "name": "Coleccionista de mejoras",
+      "description": "Desbloquea todas las mejoras disponibles."
+    },
+    "upgradeExpert": {
+      "name": "Experto en mejoras",
+      "description": "Desbloquea 10 mejoras."
+    },
+    "autoUpgrade": {
+      "name": "Automático",
+      "description": "Activa una mejora automática."
+    },
+    "upgradeAddict": {
+      "name": "Adicto a las mejoras",
+      "description": "Desbloquea 50 mejoras."
+    },
+    "powerUpgrade": {
+      "name": "Mejora poderosa",
+      "description": "Desbloquea una mejora que aumenta significativamente tu producción de galletas."
+    },
+    "maxedOutUpgrades": {
+      "name": "Maximización",
+      "description": "Desbloquea todas las mejoras y alcanza su nivel máximo."
+    }
+  }
 }

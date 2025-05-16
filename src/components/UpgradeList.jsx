@@ -1,7 +1,10 @@
 import React from 'react';
+import {useTranslation} from "react-i18next";
 
 function UpgradeList({ upgrades, cookies, onUpgrade }) {
     const visibleUpgrades = upgrades.filter(upgrade => upgrade.unlocked);
+    const { t } = useTranslation();
+
 
     const handleUpgrade = (id) => {
         onUpgrade(id);
@@ -21,11 +24,11 @@ function UpgradeList({ upgrades, cookies, onUpgrade }) {
                         disabled={cookies < upgrade.cost}
                         className={`upgrade-button ${cookies < upgrade.cost ? 'disabled' : ''}`}
                     >
-                        {upgrade.name} (Cost: {upgrade.cost} cookies)
+                        {t(`upgrades-name.${upgrade.key}`)} ({t('cost')} : {upgrade.cost.toLocaleString()} cookies)
                     </button>
                 ))
             ) : (
-                <p className="no-upgrades">No upgrades available yet!</p>
+                <p className="no-upgrades">{t('no-upgrades')}</p>
             )}
         </div>
     );

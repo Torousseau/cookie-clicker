@@ -1,7 +1,11 @@
+import {useTranslation} from "react-i18next";
+
 function CookieButton({ handleClick }) {
+    const { t } = useTranslation();
+
     return (
         <button onClick={handleClick} className="cookie-button">
-            <span className="cookie-emoji">🍪</span> Click Me!
+            {t('click-me')}
         </button>
     );
 }
