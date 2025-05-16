@@ -1,0 +1,12 @@
+{
+  "title": "Settings",
+  "username": "Username",
+  "theme": "Theme",
+  "language": "Language",
+  "notifications": "Notifications",
+  "save": "Save",
+  "light": "Light",
+  "dark": "Dark",
+  "system": "System",
+  "saved": "Settings saved!"
+}

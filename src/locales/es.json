@@ -1,0 +1,12 @@
+{
+  "title": "Configuración",
+  "username": "Nombre de usuario",
+  "theme": "Tema",
+  "language": "Idioma",
+  "notifications": "Notificaciones",
+  "save": "Guardar",
+  "light": "Claro",
+  "dark": "Oscuro",
+  "system": "Sistema",
+  "saved": "¡Configuración guardada!"
+}

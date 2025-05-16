@@ -1,5 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --color-hover : #ffcc66;
+  --color-bg : #242424;
+  --color-bg-light : #e0e0e0;
+  --color-text : #ffffff;
+  --color-text-light : #000000;
+  --color-menu : #2a2a2a;
+  --color-menu-light : #f0f0f0;
+  --color-unlocked : #00ffae;
+  --color-closed : #ff5473;
+  --color-button: #1f1f1f;
+  --color-button-hover: #3a3a3a;
   line-height: 1.5;
   font-weight: 400;
 
@@ -7,6 +19,7 @@
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
 
+  font-family: 'Ubuntu', sans-serif;;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;

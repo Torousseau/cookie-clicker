@@ -1,19 +1,23 @@
 import React, { useEffect, useState } from "react";
 import "../assets/styles/WiiHomePage.css";
-import {Settings, Cookie, User, TreeDeciduous} from "lucide-react";
+import {Settings, Cookie, Github, TreeDeciduous} from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 const tiles = [
     { icon: <Cookie className="tile-icon" />, label: "Cookie Clicker", route: "/cookie-clicker" },
     { icon: <TreeDeciduous className="tile-icon" />, label: "Tree", route: "/tree" },
-    { icon: <User className="tile-icon" />, label: "Profil" },
-    { icon: <Settings className="tile-icon" />, label: "Paramètres" },
+    { icon: <Github className="tile-icon" />, label: "Github", href: "https://github.com/Torousseau" },
+    { icon: <Settings className="tile-icon" />, label: "Paramètres", route: "/settings" },
 ];
+
+
 
 export default function WiiHomePage() {
     const [time, setTime] = useState(new Date());
     const [selectedIndex, setSelectedIndex] = useState(null);
     const navigate = useNavigate();
+
+
 
     useEffect(() => {
         const timer = setInterval(() => setTime(new Date()), 1000);
@@ -22,12 +26,16 @@ export default function WiiHomePage() {
 
     const handleTileClick = (tile, index) => {
         if (tile.route) {
-            setSelectedIndex(index);
+            setSelectedIndex(index); // Zoom uniquement pour navigation interne
             setTimeout(() => {
                 navigate(tile.route);
-            }, 300); // Laisse le temps à l'animation de se jouer
+            }, 300);
+        } else if (tile.href) {
+            // Pas de zoom pour les liens externes
+            window.open(tile.href, "_blank");
         }
     };
+
 
     const formatTime = (date) => {
         const hours = date.getHours() % 12 || 12;

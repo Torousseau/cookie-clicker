@@ -1,17 +1,17 @@
-import '../App.css';
-import React, { useEffect, useState, useCallback } from 'react';
+import '../assets/styles/CookieClickerPage.css';
+import React, {useCallback, useEffect, useState} from 'react';
 import Header from '../components/Header';
 import CookieDisplay from '../components/CookieDisplay';
 import CookieButton from '../components/CookieButton';
 import useCookieGame from '../hooks/UseCookieGame.jsx';
 import UpgradeMenu from '../components/UpgradeMenu.jsx';
 import BottomNav from '../components/BottomNav.jsx';
-import StatsPage from '../components/StatsPage.jsx';
+import Stats from '../components/Stats.jsx';
 import AchievementPage from '../components/Achievements.jsx';
 import AchievementNotification from '../components/AchievementNotification.jsx';
 import achievementsData from '../data/achievements.json';
 
-function CookieClicker() {
+function CookieClickerPage() {
     const {
         cookies,
         cookiesPerSecond,
@@ -21,32 +21,28 @@ function CookieClicker() {
         autoClickers,
         autoUpgrades,
         unlockedUpgrades,
+        reset,
     } = useCookieGame();
 
-    // États locaux
     const [clickCount, setClickCount] = useState(0);
     const [timePlayed, setTimePlayed] = useState(0);
     const [unlockedAchievements, setUnlockedAchievements] = useState({});
     const [latestAchievement, setLatestAchievement] = useState(null);
     const [selectedTab, setSelectedTab] = useState(null);
 
-    // Hook pour sauvegarde/restauration
-    // useSaveLoadCookies({
-    //     cookies,
-    //     setCookies,
-    //     clickCount,
-    //     setClickCount,
-    //     timePlayed,
-    //     setTimePlayed,
-    //     unlockedAchievements,
-    //     setUnlockedAchievements,
-    //     latestAchievement,
-    //     setLatestAchievement,
-    //     upgrades,
-    //     setUpgrades,
-    // });
+    // Charger les achievements depuis le localStorage
+    useEffect(() => {
+        const saved = localStorage.getItem('unlockedAchievements');
+        if (saved) {
+            setUnlockedAchievements(JSON.parse(saved));
+        }
+    }, []);
 
-    // Timer du temps de jeu
+    // Sauvegarder les achievements dans le localStorage
+    useEffect(() => {
+        localStorage.setItem('unlockedAchievements', JSON.stringify(unlockedAchievements));
+    }, [unlockedAchievements]);
+
     useEffect(() => {
         const interval = setInterval(() => {
             setTimePlayed(prev => prev + 1);
@@ -54,17 +50,15 @@ function CookieClicker() {
         return () => clearInterval(interval);
     }, []);
 
-    // Fonction stable pour débloquer un achievement
     const unlockAchievement = useCallback((key) => {
         setUnlockedAchievements(prev => {
-            if (prev[key]) return prev; // déjà débloqué
+            if (prev[key]) return prev;
             const updated = { ...prev, [key]: true };
             setLatestAchievement(achievementsData[key]);
             return updated;
         });
     }, []);
 
-    // Reset automatique de la notification d'achievement
     useEffect(() => {
         if (latestAchievement) {
             const timeout = setTimeout(() => setLatestAchievement(null), 5000);
@@ -72,15 +66,12 @@ function CookieClicker() {
         }
     }, [latestAchievement]);
 
-    // Gestion des clics
     const handleGameClick = () => {
         handleClick();
         setClickCount(prev => prev + 1);
     };
 
-    // Vérification des achievements à chaque update pertinent
     useEffect(() => {
-        // Achievements basés sur cookies
         [
             { key: "firstClick", condition: clickCount >= 1 },
             { key: "tenCookies", condition: cookies >= 10 },
@@ -104,8 +95,8 @@ function CookieClicker() {
             { key: "autoClicker", condition: autoClickers >= 1 },
             { key: "autoUpgrade", condition: autoUpgrades >= 1 },
 
-            { key: "idlePlayer", condition: timePlayed >= 86400 },          // 24h
-            { key: "unbreakable", condition: timePlayed >= 259200 },        // 3 jours
+            { key: "idlePlayer", condition: timePlayed >= 86400 },
+            { key: "unbreakable", condition: timePlayed >= 259200 },
 
             { key: "achievementHunter", condition: Object.keys(unlockedAchievements).length === Object.keys(achievementsData).length },
 
@@ -129,16 +120,40 @@ function CookieClicker() {
 
     const handleClose = () => setSelectedTab(null);
 
+    const resetGame = () => {
+        // Vider localStorage
+        localStorage.removeItem('unlockedAchievements');
+
+        // Réinitialiser les états locaux
+        setUnlockedAchievements({});
+        setClickCount(0);
+        setTimePlayed(0);
+
+
+        // Réinitialiser le jeu via le hook (ajoute cette méthode si elle n'existe pas encore)
+        if (typeof reset === 'function') {
+            reset();
+        }
+
+        // Optionnel : notification ou feedback
+        alert("Jeu réinitialisé !");
+    };
+
+
     return (
         <div className="cookie-clicker">
-            <Header />
+            <Header/>
+            <button onClick={resetGame} className="reset-button">
+                Réinitialiser le jeu
+            </button>
+
             <h1 className="header-title">Cookie Clicker</h1>
 
             <CookieDisplay
                 cookies={cookies}
                 cookiesPerSecond={cookiesPerSecond}
             />
-            <CookieButton handleClick={handleGameClick} />
+            <CookieButton handleClick={handleGameClick}/>
 
             <div className="overlay-container">
                 {selectedTab === 'upgrades' && (
@@ -161,7 +176,7 @@ function CookieClicker() {
                 )}
                 {selectedTab === 'stats' && (
                     <div className="overlay-content">
-                        <StatsPage
+                        <Stats
                             cookies={cookies}
                             cookiesPerSecond={cookiesPerSecond}
                             upgrades={upgrades}
@@ -181,9 +196,9 @@ function CookieClicker() {
                 />
             )}
 
-            <BottomNav selected={selectedTab} onSelect={setSelectedTab} />
+            <BottomNav selected={selectedTab} onSelect={setSelectedTab}/>
         </div>
     );
 }
 
-export default CookieClicker;
+export default CookieClickerPage;

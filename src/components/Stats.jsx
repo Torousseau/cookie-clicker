@@ -2,7 +2,7 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
 
-function StatsPage({ cookies, cookiesPerSecond, upgrades, onClose, unlockedAchievements, achievementsData, timePlayed }) {
+function Stats({ cookies, cookiesPerSecond, upgrades, onClose, unlockedAchievements, achievementsData, timePlayed }) {
     const totalAchievements = Object.keys(achievementsData).length;
     const unlockedCount = Object.values(unlockedAchievements).filter(Boolean).length;
     const percentageUnlocked = totalAchievements > 0 ? (unlockedCount / totalAchievements) * 100 : 0;
@@ -47,8 +47,9 @@ function StatsPage({ cookies, cookiesPerSecond, upgrades, onClose, unlockedAchie
                     <h3>Achievements Unlocked</h3>
                     <p>{percentageUnlocked.toFixed(2)}%</p>
                 </div>
+
             </div>
             );
             }
 
-            export default StatsPage;
+            export default Stats;

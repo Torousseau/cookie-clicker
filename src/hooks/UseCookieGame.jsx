@@ -1,6 +1,7 @@
 import { useEffect, useState, useMemo } from 'react';
 import upgradesData from '../data/UpgradesData.jsx';
 import { calculateNewCost, calculateTotalCPS } from '../components/UpgradeUtils.jsx';
+import upgradesDataRaw from "../data/UpgradesDataRaw.jsx";
 
 export default function useCookieGame() {
     const [cookies, setCookies] = useState(0);
@@ -22,6 +23,15 @@ export default function useCookieGame() {
             upgrades.filter(upg => upg.quantity > 0).map(upg => upg.id),
         [upgrades]
     );
+
+    const reset = () => {
+        setCookies(0);
+        setCookiesPerSecond(0);
+        setSessionCookies(0);
+        setUpgrades(upgradesDataRaw);
+    };
+
+
 
     // Gestion du clic manuel
     const handleClick = () => {
@@ -90,5 +100,6 @@ export default function useCookieGame() {
         setCookies,
         setUpgrades,
         setCookiesPerSecond,
+        reset
     };
 }
